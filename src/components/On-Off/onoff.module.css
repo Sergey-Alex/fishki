@@ -1,0 +1,42 @@
+ .wrapper {
+     background-color: #282c34;
+     width: 500px;
+     height: 500px;
+     margin: 50px auto;
+     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+     display: flex;
+ }
+.on {
+    width: 100px;
+    height: 60px;
+    border-radius: 5px;
+    background-color: #a5ea97;
+    text-align: center;
+    font-size: 30px ;
+    font-family: "Comic Sans MS";
+    font-weight:bold;
+    color: #09090c;
+
+}
+
+.off {
+    text-align: center;
+    width: 100px;
+    height: 60px;
+    background-color: #f5888f;
+    border-radius: 5px;
+    font-size: 30px ;
+    font-family: "Comic Sans MS";
+    font-weight:bold;
+    color: #000000;
+}
+
+.ring {
+    width: 50px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    height: 50px;
+}
+.colorRing {
+    background-color: yellow !important;
+}
