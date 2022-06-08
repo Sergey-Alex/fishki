@@ -1,20 +1,19 @@
 import React, {useState} from 'react';
 import classes from './onoff.module.css'
 
-type OnOffType = {
+export type OnOffType = {
     value: boolean
+    onClick: () => void
 }
 
-const OnOff = ({value} : OnOffType) => {
+ export const OnOff = ({value} : OnOffType) => {
 
     const [colorRing, setColorRing] = useState(value)
 
 
-    console.log(colorRing)
     const changeColor = () => {
           setColorRing(!colorRing)
     }
-
 
     return (
         <div className={classes.wrapper}>
@@ -27,4 +26,3 @@ const OnOff = ({value} : OnOffType) => {
     );
 };
 
-export default OnOff;

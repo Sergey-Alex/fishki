@@ -5,7 +5,7 @@ type AccordionType = {
 }
 
 
-export default function UncontrolledAccordion(props: AccordionType) {
+export  function UncontrolledAccordion(props: AccordionType) {
 
 
     const [toggle, setToggle] = useState(false)

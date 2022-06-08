@@ -3,7 +3,7 @@ import React, {useState} from "react";
 type RatingType = {
     value: 1 | 2 | 3 | 4 | 5
 }
-export default function Rating() {
+export  function UncontrolledRating() {
     const [ratingNum, setRatingNum] = useState(0)
 
     const changeRating = (num:number) => {
@@ -27,6 +27,5 @@ type StarRatingType = {
 }
 
 function Star({selected, changeRating, value}: StarRatingType) {
-
     return  <span onClick={() => changeRating(value)} > {selected ? <b> star </b> : 'star' }</span>
 }

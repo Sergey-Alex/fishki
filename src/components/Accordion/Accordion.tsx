@@ -7,8 +7,7 @@
         setAccordionCollapsed: (collapsed: boolean) => void
     }
 
-
-    export default function Accordion(props: AccordionTypeProps) {
+    export  function Accordion(props: AccordionTypeProps) {
 
         return <div>
             <AccordionTitle title={props.titleValue}
