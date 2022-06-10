@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import classes from './Select.module.css'
 
 type ItemType = {
@@ -14,9 +14,18 @@ type CustomSelectPropsType = {
 
 const CustomSelect = (props: CustomSelectPropsType) => {
     const [active, setActive] = useState(false);
+    const [hoveredElement, setHoveredElementValue] = useState(props.value);
 
     const selectedItem = props.items.find(i => i.value === props.value)
+    const hoveredItem = props.items.find(i => i.value === hoveredElement)
     //const optionValue = props.items.filter(item => )
+
+    useEffect(() => {
+        setHoveredElementValue(props.value)
+    }, [props.value])
+
+    const toggleItems = () => setActive(!active)
+
     const itemClicked = (value: any) => {
         props.onChange(value)
         setActive(false)
