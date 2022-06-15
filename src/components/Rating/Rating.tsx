@@ -6,7 +6,7 @@ export type RatingType = {
     value: RatingPropsType
     onClickRating: (value:RatingPropsType) => void
 }
-export default function Rating({value, onClickRating}:RatingType) {
+export default function RatingMemo({value, onClickRating}:RatingType) {
     return <div>
         <Star selected = {value > 0} value = {1} onClickRating = {onClickRating}/>
         <Star selected = {value > 1} value = {2} onClickRating = {onClickRating}/>
@@ -15,6 +15,8 @@ export default function Rating({value, onClickRating}:RatingType) {
         <Star selected = {value > 4} value = {5} onClickRating = {onClickRating}/>
     </div>
 }
+
+const Rating = React.memo(RatingMemo)
 
 type StarPropsType = {
     value: RatingPropsType

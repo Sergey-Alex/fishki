@@ -1,11 +1,16 @@
 import {ActionType} from "./UncontrolledAccordion";
 
-const TOGGLE_COLLAPSED = 'TOGGLE-COLLAPSED'
+export const TOGGLE_COLLAPSED = 'TOGGLE-COLLAPSED'
 
-export const reducer = (state: boolean, action: ActionType): boolean => {
+export type StateType = {
+    collapsed: boolean
+}
+
+export const reducer = (state: StateType, action: ActionType): StateType => {
     switch (action.type) {
         case TOGGLE_COLLAPSED:
-            return !state
+            const stateCopy = {...state, collapsed: !state.collapsed}
+            return  stateCopy
         default:
             throw new Error('bad action type')
     }

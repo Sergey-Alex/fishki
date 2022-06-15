@@ -16,7 +16,7 @@ export  function UncontrolledAccordion(props: AccordionType) {
 
 
 //    const [toggle, setToggle] = useState(false)
-    let [toggle, dispatch] = useReducer( reducer,false )
+    let [state, dispatch] = useReducer( reducer,{collapsed:false} )
 
     const toggleMoved = () => {
         dispatch({type:TOGGLE_COLLAPSED})
@@ -25,7 +25,7 @@ export  function UncontrolledAccordion(props: AccordionType) {
 
     return <>
         <AccordionTitle title={props.title} toggleMoved={toggleMoved}/>
-        {toggle && <AccordionBody/>}
+        {!state.collapsed && <AccordionBody/>}
     </>
 
 }

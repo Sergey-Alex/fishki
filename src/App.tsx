@@ -14,16 +14,16 @@ import CustomSelect from "./CustomSelect/CustomSelect";
 // }
 
 function App() {
-    // const [ratingValue, setRatingValue] = useState<RatingPropsType>(1)
-    // const [accordionCollapsed, setAccordionCollapsed]  = useState<boolean>(false)
+    const [ratingValue, setRatingValue] = useState<RatingPropsType>(1)
+    const [accordionCollapsed, setAccordionCollapsed]  = useState<boolean>(false)
 
-  //  const [uOnOff, setUOnOff] = useState<boolean>(true)
+   const [uOnOff, setUOnOff] = useState<boolean>(true)
 
     
     return (
         <div>
             {/*<UncontrolledOnOff value={uOnOff} callBackUnOnOff = {setUOnOff}/>*/}
-            {/*<AppTitle/>*/}
+
             {/*<UncontrolledRating/>*/}
             {/*<Rating value={ratingValue} onClickRating = {setRatingValue}/>*/}
             {/*<Accordion*/}
