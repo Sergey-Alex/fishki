@@ -81,6 +81,25 @@ export const Select1 = () => {
         </select>
     )
 }
+export const Select2 = () => {
+    const [cityList, setCityList] = useState(arrCity);
+
+    const memArr = useMemo(() => {
+        return cityList
+            .filter(c => c.city.toLowerCase().indexOf('m'))
+            .map((c: SelectTypeData) => <option value={c.city}>{c.city}</option>
+            )
+    }, []);
+
+
+    return (
+        <select >
+            {memArr}
+        </select>
+    )
+}
+
+
 
 
 // export const Select2 = () => {

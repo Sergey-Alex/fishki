@@ -7,6 +7,7 @@ import {UncontrolledAccordion} from "./components/UncontrolledAccordion/Uncontro
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
 import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
 import CustomSelect from "./CustomSelect/CustomSelect";
+import Clock from "./components/Clock/Clock";
 
 // function hello() {
 //     debugger
@@ -15,15 +16,20 @@ import CustomSelect from "./CustomSelect/CustomSelect";
 
 function App() {
     const [ratingValue, setRatingValue] = useState<RatingPropsType>(1)
-    const [accordionCollapsed, setAccordionCollapsed]  = useState<boolean>(false)
+    const [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
 
-   const [uOnOff, setUOnOff] = useState<boolean>(true)
+    const [uOnOff, setUOnOff] = useState<boolean>(true)
+    const [isDigitalMode, setIsDigitalMode] = useState<boolean>(false)
 
-    
+    const setDigital = () => {
+         setIsDigitalMode(!isDigitalMode)
+    }
+
+
     return (
         <div>
             {/*<UncontrolledOnOff value={uOnOff} callBackUnOnOff = {setUOnOff}/>*/}
-
+            <Clock setDigital={setDigital} isDigitalMode={isDigitalMode}/>
             {/*<UncontrolledRating/>*/}
             {/*<Rating value={ratingValue} onClickRating = {setRatingValue}/>*/}
             {/*<Accordion*/}
